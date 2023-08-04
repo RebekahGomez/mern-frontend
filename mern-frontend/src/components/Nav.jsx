@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { NavLink, Link } from "react-router-dom"
-import { NavItems } from "./NavItems"
+
 
 export default function Nav({ games }) {
   const [open, setOpen] = useState(false);
+
+
+  console.log(open)
 
   const handleOpen = () => {
     setOpen(prev => !prev);
@@ -19,7 +22,7 @@ export default function Nav({ games }) {
             <ul className="menu">
               {games.map((game) => (
                 <Link to={`/games/${game._id}`}>
-                  <li className="menu-item">
+                  <li className="menu-item" onClick={handleOpen}>
                     {game.name}
                   </li>
                 </Link>
@@ -32,11 +35,3 @@ export default function Nav({ games }) {
     </nav>
   )
 }
-
-// {NavItems.map((item, index) => {
-//   return (
-//     <div key={index}>
-//       <NavLink className="navLink" to={item.url}>{item.title}</NavLink>
-//     </div>
-//   )
-// })}
