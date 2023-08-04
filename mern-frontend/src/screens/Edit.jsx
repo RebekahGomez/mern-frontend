@@ -42,7 +42,7 @@ export default function GameEdit() {
 
   return (
     <div>
-      <h1>Add your own game to the database</h1>
+      <h1>Edit this game</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -60,7 +60,7 @@ export default function GameEdit() {
         />
         <input
           type="url"
-          placeholder="Add an imamge of your game"
+          placeholder="Add an image of your game"
           name="image"
           value={game.image}
           onChange={handleChange}

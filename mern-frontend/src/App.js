@@ -11,10 +11,11 @@ import { getGames } from './services/functions.js';
 function App() {
 
   const [games, setGames] = useState([])
+  const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
     fetchGames()
-  }, [])
+  }, [toggle])
 
   async function fetchGames() {
     const gamesData = await getGames()
@@ -26,11 +27,10 @@ function App() {
       <Nav games={games} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/games/:id" element={<GameDetail />} />
-        <Route path="/create" element={<Create />} />
+        <Route path="/games/:id" element={<GameDetail setToggle={setToggle} />} />
+        <Route path="/create" element={<Create setToggle={setToggle} />} />
         <Route path="/games/:id/edit" element={<Edit />} />
       </Routes>
-
     </div>
   );
 }

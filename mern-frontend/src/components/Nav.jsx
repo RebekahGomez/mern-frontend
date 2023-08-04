@@ -1,16 +1,21 @@
 import { useState } from 'react';
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link, useNavigate } from "react-router-dom"
+import { createGame } from "../services/functions"
 
 
 export default function Nav({ games }) {
   const [open, setOpen] = useState(false);
 
-
-  console.log(open)
+  let navigate = useNavigate();
 
   const handleOpen = () => {
     setOpen(prev => !prev);
   };
+
+  async function handleCreate() {
+    await createGame();
+    navigate("/create");
+  }
 
   return (
     <nav>
