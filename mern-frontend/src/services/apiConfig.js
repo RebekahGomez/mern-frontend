@@ -3,8 +3,8 @@ import axios from 'axios';
 let apiUrl;
 
 const apiUrls = {
-  production: "https://mern-heroku-deploy.herokuapp.com/api",
-  development: "http://localhost:3000/api"
+  production: "https://games-api112-05efbc6a4ce4.herokuapp.com/api",
+  development: "https://games-api112-05efbc6a4ce4.herokuapp.com/api"
 }
 
 if (window.location.hostname === "localhost") {
