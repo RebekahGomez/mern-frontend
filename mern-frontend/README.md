@@ -1,6 +1,7 @@
 # MERN Frontend
-- The purpose of this project was to create a frontend in React using a colleague's backend API
-- [Seed Data taken from this API](https://github.com/danish4101/api-project/blob/main/seed/data.js)
+- The purpose of this project was to create a full CRUD frontend in React using a colleague's backend API
+- [Colleague's GitHub for this API](https://github.com/danish4101/api-project/blob/main/seed/data.js)
+- [Colleague's Deployed API](https://games-api112-05efbc6a4ce4.herokuapp.com/api)
 
 ### CONTACT
 [Rebekah Gomez LinkedIn](https://www.linkedin.com/in/rebekah-gomez/)
