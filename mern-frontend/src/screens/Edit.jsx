@@ -40,55 +40,74 @@ export default function GameEdit() {
     }))
   }
 
+  const types = ["action", "adventure", "racing", "role-playing", "sports"]
+  const ratings = ["everyone", "teen", "mature"]
+  const systems = ["all", "PlayStation", "Xbox", "Switch", "PC"]
+
   return (
-    <div>
-      <h1>Edit this game</h1>
+    <div className="pageContainer">
       <form className="create-form" onSubmit={handleSubmit}>
-        <input
+        <h1 className="create-h1">Edit this game</h1>
+        <input className="create-input"
           type="text"
-          placeholder="Please add your game's name"
+          placeholder="Game's name"
           name="name"
           value={game.name}
           onChange={handleChange}
         />
-        <input
-          type="text"
-          placeholder="Type of game"
-          name="type"
+
+        <select
           value={game.type}
-          onChange={handleChange}
-        />
-        <input
+          name="type"
+          onChange={handleChange}>
+          <option value="" disabled>Type</option>
+          {types.map((type, index) => (
+            <option className="options"
+              value={type}
+              key={index}>{type}</option>))}
+        </select>
+
+        <input className="create-input"
           type="url"
-          placeholder="Add an image of your game"
+          placeholder="Image URL"
           name="image"
           value={game.image}
           onChange={handleChange}
         />
-        <input
-          type="text"
-          placeholder="What is the rating?"
-          name="rating"
+
+        <select
           value={game.rating}
-          onChange={handleChange}
-        />
-        <input
+          name="rating"
+          onChange={handleChange}>
+          <option value="" disabled>Rating</option>
+          {ratings.map((rating, index) => (
+            <option className="options"
+              value={rating}
+              key={index}>{rating}</option>))}
+        </select>
+
+        <input className="create-input"
           type="number"
-          placeholder="0"
+          placeholder="Price"
           name="price"
           value={game.price}
           onChange={handleChange}
         />
-        <input
-          type="text"
-          placeholder="What gaming system is this for?"
-          name="systme"
+
+        <select
           value={game.system}
-          onChange={handleChange}
-        />
-        <input
+          name="system"
+          onChange={handleChange}>
+          <option value="" disabled>Gaming System</option>
+          {systems.map((system, index) => (
+            <option className="options"
+              value={system}
+              key={index}>{system}</option>))}
+        </select>
+
+        <input className="create-input"
           type="text"
-          placeholder="Please add a description of your game"
+          placeholder="Game description"
           name="description"
           value={game.description}
           onChange={handleChange}
