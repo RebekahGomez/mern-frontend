@@ -1,5 +1,6 @@
 export default function Home() {
   return (
-    <div className="home">This is the Games Homepage</div>
+    <div className="home">Welcome to the Video Games homepage. Search for existing
+      video games or add your own to the database.</div>
   )
 }

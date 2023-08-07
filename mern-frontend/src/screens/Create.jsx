@@ -34,8 +34,8 @@ export default function GameCreate({ setToggle }) {
   }
 
   const types = ["action", "adventure", "racing", "role-playing", "sports"]
-  const ratings = ["Select option below", "everyone", "teen", "mature"]
-  const systems = ["Select option below", "all", "PlayStation", "Xbox", "Switch", "PC"]
+  const ratings = ["everyone", "teen", "mature"]
+  const systems = ["all", "PlayStation", "Xbox", "Switch", "PC"]
 
   return (
     <div>

@@ -1,5 +1,6 @@
 # MERN Frontend
 - The purpose of this project was to create a full CRUD frontend in React using a colleague's backend API
+- [Deployed Frontend site](https://games-mern-frontend.netlify.app)
 - [Colleague's GitHub for this API](https://github.com/danish4101/api-project/blob/main/seed/data.js)
 - [Colleague's Deployed API](https://games-api112-05efbc6a4ce4.herokuapp.com/api)
 
