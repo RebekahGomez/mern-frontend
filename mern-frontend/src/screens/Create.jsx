@@ -10,6 +10,7 @@ export default function GameCreate({ setToggle }) {
     image: "",
     rating: "",
     price: "",
+    system: "",
     description: "",
   })
 
@@ -33,8 +34,8 @@ export default function GameCreate({ setToggle }) {
   }
 
   const types = ["action", "adventure", "racing", "role-playing", "sports"]
-  const ratings = ["everyone", "teen", "mature"]
-  const systems = ["all", "PlayStation", "Xbox", "Switch", "PC"]
+  const ratings = ["Select option below", "everyone", "teen", "mature"]
+  const systems = ["Select option below", "all", "PlayStation", "Xbox", "Switch", "PC"]
 
   return (
     <div>
@@ -50,7 +51,9 @@ export default function GameCreate({ setToggle }) {
 
         <select
           value={game.type}
+          name="type"
           onChange={handleChange}>
+          <option value="" disabled>Type</option>
           {types.map((type, index) => (
             <option className="options"
               value={type}
@@ -67,7 +70,9 @@ export default function GameCreate({ setToggle }) {
 
         <select
           value={game.rating}
+          name="rating"
           onChange={handleChange}>
+          <option value="" disabled>Rating</option>
           {ratings.map((rating, index) => (
             <option className="options"
               value={rating}
@@ -84,7 +89,9 @@ export default function GameCreate({ setToggle }) {
 
         <select
           value={game.system}
+          name="system"
           onChange={handleChange}>
+          <option value="" disabled>Gaming System</option>
           {systems.map((system, index) => (
             <option className="options"
               value={system}
