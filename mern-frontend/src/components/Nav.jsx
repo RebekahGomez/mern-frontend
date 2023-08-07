@@ -26,7 +26,7 @@ export default function Nav({ games }) {
           {open ? (
             <ul className="menu">
               {games.map((game) => (
-                <Link to={`/games/${game._id}`}>
+                <Link className='menu-item' to={`/games/${game._id}`}>
                   <li className="menu-item" onClick={handleOpen}>
                     {game.name}
                   </li>

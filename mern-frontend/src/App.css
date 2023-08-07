@@ -4,12 +4,37 @@
   justify-content: center;
 }
 
-.home {
-  text-align: center;
-}
-
 .navLink {
   text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.navLink:hover {
+  color: lightgray;
+}
+
+.editDeleteButton {
+  background-color: transparent;
+  border: 2px solid black;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  margin: 10px;
+}
+
+.editDeleteButton:hover {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: lightgray;
+}
+
+.home {
+  text-align: center;
 }
 
 .dropdown {
@@ -18,21 +43,50 @@
 
 .menu {
   position: absolute;
-
   list-style-type: none;
   margin: 5px 0;
   padding: 0;
-
-  border: 1px solid grey;
   width: 150px;
 }
 
-.menu>li {
-  margin: 0;
+.options {
+  color: black;
+}
 
+.create-h1 {
+  text-align: center;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: black;
   background-color: white;
 }
 
-.menu>li:hover {
+.menu-item:hover {
   background-color: lightgray;
+}
+
+img {
+  width: 400px;
+}
+
+.game-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  color: black;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.game-items {
+  grid-column: 1 / 3;
 }

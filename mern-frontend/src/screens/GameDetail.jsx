@@ -26,18 +26,19 @@ export default function GameDetail({ setToggle }) {
   return (
     <div className="game-detail">
       <h3>{game.name}</h3>
-      <p>{game.type}</p>
       <img src={game.image} alt={game.name} />
-      {/* // I want this part to be an icon image */}
-      <p>Rated: {game.rating}</p>
-      <p>${game.price}</p>
-      <p>{game.system}</p>
-      <p>{game.description}</p>
+      <div className="game-items">
+        <p>{game.type}</p>
+        <p>Rated: {game.rating}</p>
+        <p>${game.price}</p>
+        <p>System compatability: {game.system}</p>
+        <p>{game.description}</p>
+      </div>
       <div>
         <Link to={`/games/${id}/edit`}>
-          <button>Edit Game</button>
+          <button className="editDeleteButton">Edit Game</button>
         </Link>
-        <button onClick={handleDelete}>Delete</button>
+        <button className="editDeleteButton" onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );
